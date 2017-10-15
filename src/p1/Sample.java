@@ -70,8 +70,7 @@ public class Sample
 
         cmd.add(sevenZipExe.toString());             // 7-zipのコマンドラインツール
         cmd.add(EXTRACT);                            // 展開する。
-        cmd.add(new StringBuilder().append(OUTPUT)    // 解凍先フォルダの指定
-                                   .append(dstFolder).toString());
+        cmd.add(OUTPUT + dstFolder);                 // 解凍先フォルダの指定
         cmd.add(targetZipFile.toString());           // 解凍する圧縮ファイル
 
         return cmd;
